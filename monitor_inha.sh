@@ -14,5 +14,5 @@ echo "Top Processes:"
 echo "$top_processes"
 process_count=$(ps -ef | grep -v "PID" | wc -l)
 echo "Process Count: $process_count"
-user_count=$(who | wc -l)
+user_count=$(who | tail -n +3 | wc -l)
 echo "User Count: $user_count"
